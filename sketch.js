@@ -6,8 +6,8 @@ function setup() {
   let constrains = {
     audio: false,
     video: {
-      width: windowWidth,
-      height: windowHeight,
+      width: windowHeight,
+      height: windowWidth,
       aspectRatio: 1,
       facingMode: {
         exact: "environment",
