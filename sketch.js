@@ -6,6 +6,8 @@ function setup() {
   let constrains = {
     audio: false,
     video: {
+      width: { min: 640, ideal: 1280 },
+      height: { min: 480, ideal: 720 },
       facingMode: {
         exact: "environment",
       },
@@ -18,6 +20,7 @@ function setup() {
 function draw() {
   background(64);
   //image(videoIn, 0, 0, width, (width * videoIn.height) / videoIn.width);
+
   image(
     videoIn,
     -windowWidth * 0.5,
