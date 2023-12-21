@@ -2,19 +2,20 @@ let videoIn;
 
 function setup() {
   createCanvas(400, 400, WEBGL);
-  videoIn = createCapture(VIDEO, {
+
+  let constrains = {
     audio: false,
     video: {
-      /*
       width: 280,
       height: 280,
-      */
       aspectRatio: 1,
       facingMode: {
         exact: "environment",
       },
     },
-  });
+  };
+
+  videoIn = createCapture(VIDEO, constrains);
 }
 
 function draw() {
