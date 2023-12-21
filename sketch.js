@@ -6,8 +6,8 @@ function setup() {
   let constrains = {
     audio: false,
     video: {
-      width: width,
-      height: height,
+      width: windowWidth,
+      height: windowHeight,
       aspectRatio: 1,
       facingMode: {
         exact: "environment",
@@ -19,10 +19,15 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(64);
   //image(videoIn, 0, 0, width, (width * videoIn.height) / videoIn.width);
-  fill(255);
-  rect(-width * 0.5, -width * 0.5, width, height);
+  image(
+    videoIn,
+    -windowWidth * 0.5,
+    -windowHeight * 0.5,
+    windowWidth,
+    windowHeight
+  );
 }
 
 function windowResized() {
