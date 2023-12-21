@@ -1,8 +1,8 @@
 let videoIn;
-let shader;
+let test;
 
 function preload() {
-  shader = loadShader("assets/effect.vert", "assets/effect.frag");
+  test = loadShader("assets/effect.vert", "assets/effect.frag");
 }
 
 function setup() {
@@ -25,9 +25,11 @@ function setup() {
 
 function draw() {
   background(64);
-  shader(shader);
-  camShader.setUniform("tex0", videoIn);
-  camShader.setUniform("mouseX", mouseX / width);
+
+  shader(test);
+
+  test.setUniform("tex0", videoIn);
+  test.setUniform("mouseX", mouseX / width);
 
   image(
     videoIn,
