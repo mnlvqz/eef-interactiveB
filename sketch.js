@@ -1,13 +1,13 @@
 let videoIn;
 
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
 
   let constrains = {
     audio: false,
     video: {
-      width: 280,
-      height: 280,
+      width: width,
+      height: height,
       aspectRatio: 1,
       facingMode: {
         exact: "environment",
@@ -20,5 +20,11 @@ function setup() {
 
 function draw() {
   background(220);
-  image(videoIn, 0, 0, width, (width * videoIn.height) / videoIn.width);
+  //image(videoIn, 0, 0, width, (width * videoIn.height) / videoIn.width);
+  fill(255);
+  rect(-width * 0.5, -width * 0.5, width, height);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
