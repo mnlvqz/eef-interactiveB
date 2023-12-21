@@ -15,6 +15,7 @@ function setup() {
   };
 
   videoIn = createCapture(VIDEO, constrains);
+  videoIn.hide();
 }
 
 function draw() {
@@ -22,10 +23,10 @@ function draw() {
   videoIn.loadPixels();
   image(
     videoIn,
-    -windowWidth * 0.25,
-    -windowHeight * 0.25,
-    windowWidth * 0.5,
-    windowHeight * 0.5
+    -windowWidth * 0.5,
+    -windowHeight * 0.5,
+    windowWidth,
+    windowHeight
   );
 }
 
