@@ -2,7 +2,7 @@ let videoIn;
 let shader;
 
 function preload() {
-  shader = loadShader("effect.vert", "effect.frag");
+  shader = loadShader("assets/effect.vert", "assets/effect.frag");
 }
 
 function setup() {
