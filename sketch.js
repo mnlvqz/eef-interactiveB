@@ -19,14 +19,13 @@ function setup() {
 
 function draw() {
   background(64);
-  //image(videoIn, 0, 0, width, (width * videoIn.height) / videoIn.width);
-
+  videoIn.loadPixels();
   image(
     videoIn,
-    -windowWidth * 0.5,
-    -windowHeight * 0.5,
-    windowWidth,
-    windowHeight
+    -windowWidth * 0.25,
+    -windowHeight * 0.25,
+    windowWidth * 0.5,
+    windowHeight * 0.5
   );
 }
 
